@@ -155,11 +155,17 @@ h1, h2, h3, h4, h5 {
 }
 
 /* form */
+.form-content {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+}
+
 input, textarea {
+  width: 400px;
   padding: 10px;
   border: 1px solid #E5E5E5;
-  width: 100%;
-  margin: 0 15px;
   color: #999999;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
@@ -167,8 +173,6 @@ input, textarea {
 }
 
 textarea {
-  width: 100%;
-  margin: 0 15px;
   height: 150px;
   line-height: 18px;
 }
@@ -200,6 +204,14 @@ input:focus, textarea:focus {
 }
 
 /* end form */
+/* about */
+.about {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+/* end about */
 /* end contact.html */
 
 /*# sourceMappingURL=style.min.css.map */
