@@ -9,18 +9,3 @@
 })()
 /* end menu */
 
-/* smooth scroll */
-function handleLinkClick (e) {
-    e.preventDefault();
-
-    document
-        .querySelector(e.target.hash)
-        .scrollIntoView({ behavior: 'smooth' });
-}
-
-var links = document.querySelectorAll('ul.menu__nav li a');
-
-for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', handleLinkClick);
-}
-/* end smooth scroll */
