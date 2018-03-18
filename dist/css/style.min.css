@@ -213,5 +213,53 @@ input:focus, textarea:focus {
 
 /* end about */
 /* end contact.html */
+/* start about.html */
+.photo__section {
+  display: block;
+  margin: 0 15px;
+}
+
+.photo__section-image {
+  width: 100%;
+  height: auto;
+}
+
+.photo__section-bottom {
+  margin: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .photo__section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .photo__section-left {
+    flex-direction: row;
+    display: flex;
+    flex: 1 50%;
+    margin: 0 15px;
+    max-height: 750px;
+  }
+  .photo__section-right {
+    flex-direction: column;
+    display: flex;
+    flex: 1 50%;
+    margin: 0 15px;
+  }
+  .text-photo__section {
+    display: flex;
+    justify-content: center;
+  }
+  .photo__section-image {
+    max-width: 100%;
+  }
+  .photo__section-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* end about.html */
 
 /*# sourceMappingURL=style.min.css.map */
