@@ -99,6 +99,7 @@ h1, h2, h3, h4, h5 {
 .menu__nav li {
   padding: 10px 0;
   display: inline-block;
+  z-index: 1;
 }
 
 .menu__nav li a {
@@ -162,14 +163,27 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
 }
 
+.form {
+  width: 100%;
+}
+
 input, textarea {
-  width: 400px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #E5E5E5;
   color: #999999;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+@media (min-width: 768px) {
+  input, textarea {
+    width: 400px;
+  }
+  .form {
+    width: auto;
+  }
 }
 
 textarea {

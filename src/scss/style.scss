@@ -133,6 +133,7 @@ h1,h2,h3,h4,h5 {
   & li {
     padding: 10px 0;
     display: inline-block;
+    z-index: 1;
     & a {
       text-decoration: none;
       color: #333333;
@@ -201,24 +202,34 @@ h1,h2,h3,h4,h5 {
   padding: 0 15px;
   display: flex;
   justify-content: center;
-
 }
-
 
 //.form {
 //  display: flex;
 //  flex-direction: column;
 //  align-items: center;
 //}
+.form {
+  width: 100%;
+}
 
 input, textarea {
-  width: 400px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #E5E5E5;
   color: #999999;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+@include respond-to('small') {
+  input, textarea {
+    width: 400px;
+  }
+  .form {
+    width: auto;
+  }
 }
 
 textarea {
