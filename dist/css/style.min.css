@@ -143,6 +143,39 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* project-gallery */
+.project-gallery {
+  margin: 100px 15px;
+}
+
+/* ---- grid ---- */
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+/* end project-gallery */
 /* contact.html */
 .content {
   max-width: 1200px;
