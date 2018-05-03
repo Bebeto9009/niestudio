@@ -48,3 +48,4 @@ function masonry(grid, gridCell, gridGutter, dGridCol, tGridCol, mGridCol) {
         });
     });
 });
+

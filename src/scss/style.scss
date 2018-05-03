@@ -77,8 +77,8 @@ h1,h2,h3,h4,h5 {
  /*================== nav ==================*/
 .logo img{
   width: 160px;
-  padding: 15px;
-  margin: 0 20px;
+  padding: 0 15px 0 0;
+  margin: -25px -15px 0 0;
 }
 
 .logo {
@@ -118,7 +118,7 @@ h1,h2,h3,h4,h5 {
 @include respond-to('small'){
   .menu {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
   }
 }
 
@@ -139,8 +139,11 @@ h1,h2,h3,h4,h5 {
       text-decoration: none;
       color: #333333;
       font-family: $font-family-header;
-      &.active {
-        color: #337ab7;
+      &:hover {
+        color:#ef4123;
+        &.active {
+          color: #337ab7;
+        }
       }
     }
   }
@@ -224,12 +227,12 @@ img {
   margin-left: -8px; /* Adjustment for the gutter */
   counter-reset: brick;
   width: 100%;
-  padding: 70px 0;
+  padding: 70px 20px;
 }
 
 .masonry-brick {
   overflow: hidden;
-  border-radius: 5px;
+  // border-radius: 5px;
   margin: 0 0 8px 8px;  /* Some Gutter */
   background-color: #eee;
   position: relative;
@@ -390,11 +393,26 @@ input:focus, textarea:focus {
 
 /* about */
 .about {
-  //display: block;
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
+
+.about-header{
+  // align-self: center;
+  // display: flex;
+  // justify-content: center;
+}
+
+.about-text {
+  // align-self: center;
+  // display: block;
+  // margin: 0 auto;
+  // justify-content: center;
+}
+
 /* end about */
 
 /* end contact.html */
