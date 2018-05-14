@@ -298,8 +298,7 @@ h1,h2,h3,h4,h5 {
 // }
 
 #macy-container{
-  margin: 0 30px;
-
+  margin: 70px 30px;
 }
 
 .demo {
@@ -307,7 +306,6 @@ h1,h2,h3,h4,h5 {
   overflow: hidden;
   border: 1px solid #eee;
   // padding: 10px 20px;
-
 }
 
 
@@ -316,9 +314,60 @@ h1,h2,h3,h4,h5 {
   display: block;
   height: auto;
 }
-
 /*end masonry*/
 
+/*captions*/
+
+#macy-container .demo:hover .caption {
+  opacity: 1;
+}
+
+#macy-container .demo:hover .demo-image {
+  opacity: 1;
+	transform: scale(1.15,1.15);
+}
+
+#macy-container .demo-image {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  z-index: 4;
+}
+
+#macy-container .caption {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  transition:all 0.45s ease-in-out;
+  width: 100%;
+  height: 100%;
+  // text-align: center;
+}
+
+#macy-container .demo-image {
+  transition:all 0.25s ease-in-out;
+}
+
+#macy-container .blur {
+  background-color: rgba(255,255,255,0.4);
+  height: 400px;
+  width: 600px;
+	z-index: 5;
+	position: absolute;
+}
+
+#macy-container .caption-text {
+  text-transform: uppercase;
+	font-size: 24px;
+	z-index: 10;
+	color: #000;
+	position: absolute;
+	width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/*end captions*/
 /* end project-gallery */
 
 /* contact.html */
