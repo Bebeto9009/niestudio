@@ -51,5 +51,9 @@ function masonry(grid, gridCell, gridGutter, dGridCol, tGridCol, mGridCol) {
 
 
 /* lazy loader*/
-let images = document.querySelectorAll("demo-image");
-lazyloader(images);
+// const observer = demo-image(); // lazy loads elements with default selector as '.lozad'
+// observer.observe();
+
+// Initialize library
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
