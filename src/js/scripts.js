@@ -49,3 +49,7 @@ function masonry(grid, gridCell, gridGutter, dGridCol, tGridCol, mGridCol) {
     });
 });
 
+
+/* lazy loader*/
+let images = document.querySelectorAll("demo-image");
+lazyloader(images);
