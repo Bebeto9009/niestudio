@@ -6,7 +6,7 @@ var autoprefixer    = require('gulp-autoprefixer'); //auto prefixy
 var sourcemaps      = require('gulp-sourcemaps'); //sourcemapy
 var plumber         = require('gulp-plumber'); //zapobiera przerywaniu taskow
 var concat          = require('gulp-concat'); //laczenie plikow js
-var uglify          = require('gulp-uglify'); //minimalizacja js
+var uglify          = require('gulp-uglifyes'); //minimalizacja js
 var rename          = require('gulp-rename'); //zmiana nazwy wynikowych plikow
 
 
@@ -51,7 +51,10 @@ gulp.task('js', function() {
         }))
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js')) //laczenie plikow
-        .pipe(uglify()) //minimalizacja
+        .pipe(uglify({
+            mangle: false,
+            ecma: 6
+        })) //minimalizacja
         .pipe(rename({ //zamieniam wynikowy plik na scripts.min.js
             suffix: '.min',
             basename: 'scripts'
