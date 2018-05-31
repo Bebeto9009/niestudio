@@ -58,15 +58,16 @@ function masonry(grid, gridCell, gridGutter, dGridCol, tGridCol, mGridCol) {
 
 // randomProjects
 const projects = [
-    { id: 1, name: 'test1', href='https://www.wp.pl/', image: 'http://www.dike.lib.ia.us/images/sample-1.jpg/image' },
-    { id: 2, name: 'test2', href='https://www.wp.pl/', image: 'http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/sample4_l.jpg' },
-    { id: 3, name: 'test3', href='https://www.wp.pl/', image: 'https://kbob.github.io/images/sample-5.jpg' },
-    { id: 4, name: 'test4', href='https://www.wp.pl/', image: 'https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg' },
-    { id: 5, name: 'test5', href='https://www.wp.pl/', image: 'https://previews.123rf.com/images/nomadsoul1/nomadsoul11512/nomadsoul1151200103/49820654-professor-in-glasses-thinking-about-math-formulas.jpg' }
+    { id: 1, name: 'test1', href='http://niestudio.adrianpawlak.pl/projects/test1.html', image: 'http://www.dike.lib.ia.us/images/sample-1.jpg/image' },
+    { id: 2, name: 'test2', href='http://niestudio.adrianpawlak.pl/projects/test2.html', image: 'http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/sample4_l.jpg' },
+    { id: 3, name: 'test3', href='http://niestudio.adrianpawlak.pl/projects/test3.html', image: 'https://kbob.github.io/images/sample-5.jpg' },
+    { id: 4, name: 'test4', href='http://niestudio.adrianpawlak.pl/projects/test4.html', image: 'https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg' },
+    { id: 5, name: 'test5', href='http://niestudio.adrianpawlak.pl/projects/test5.html', image: 'https://previews.123rf.com/images/nomadsoul1/nomadsoul11512/nomadsoul1151200103/49820654-professor-in-glasses-thinking-about-math-formulas.jpg' }
 ]
 
 const pickedPosts = [];
 // const currentPageId = Number(location.pathname.match(/^(\d)*-/)[0]);
+// const currentPageId = window.location.pathname.match(/^(\d)*-/)[0];
 const currentPageId = 0;
 
 const projectsWithoutCurrent = projects.filter(project => project.id !== currentPageId);

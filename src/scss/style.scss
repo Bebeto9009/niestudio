@@ -359,8 +359,11 @@ h1,h2,h3,h4,h5 {
   width: 100%;
   transition: opacity 0.45s ease-in-out;
   
-  text-align: center;
-  padding: 20% 0 0;
+  // text-align: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 20% 0 0;
   font-weight: 900;
   font-size: 30px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
