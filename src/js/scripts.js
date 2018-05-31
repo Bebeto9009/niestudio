@@ -58,11 +58,11 @@ function masonry(grid, gridCell, gridGutter, dGridCol, tGridCol, mGridCol) {
 
 // randomProjects
 const projects = [
-    { id: 1, name: 'test1', href='http://localhost:3000/', image: 'http://www.dike.lib.ia.us/images/sample-1.jpg/image' },
-    { id: 2, name: 'test2', href='http://localhost:3000/', image: 'http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/sample4_l.jpg' },
-    { id: 3, name: 'test3', href='http://localhost:3000/', image: 'https://kbob.github.io/images/sample-5.jpg' },
-    { id: 4, name: 'test4', href='http://localhost:3000/', image: 'https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg' },
-    { id: 5, name: 'test5', href='http://localhost:3000/', image: 'https://previews.123rf.com/images/nomadsoul1/nomadsoul11512/nomadsoul1151200103/49820654-professor-in-glasses-thinking-about-math-formulas.jpg' }
+    { id: 1, name: 'test1', href='https://www.wp.pl/', image: 'http://www.dike.lib.ia.us/images/sample-1.jpg/image' },
+    { id: 2, name: 'test2', href='https://www.wp.pl/', image: 'http://imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-300mmf_35-56g_ed_vr/img/sample/sample4_l.jpg' },
+    { id: 3, name: 'test3', href='https://www.wp.pl/', image: 'https://kbob.github.io/images/sample-5.jpg' },
+    { id: 4, name: 'test4', href='https://www.wp.pl/', image: 'https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg' },
+    { id: 5, name: 'test5', href='https://www.wp.pl/', image: 'https://previews.123rf.com/images/nomadsoul1/nomadsoul11512/nomadsoul1151200103/49820654-professor-in-glasses-thinking-about-math-formulas.jpg' }
 ]
 
 const pickedPosts = [];
@@ -78,21 +78,67 @@ for (let index = 0; index < 3; index++) {
     }
 }
 
+// pickedPosts.forEach((post) => {
+//     const div = document.createElement('div');
+
+//     const div_text = document.createElement('div');
+//     div_text.textContent = `${post.name}`;
+//     div.appendChild(div_text);
+//     //nowy element obrazka utworzyć
+//     const div_img = document.createElement('img');
+//     div_img.src = post.image;
+//     div.appendChild(div_img);
+  
+//     document.getElementById('projects').appendChild(div);
+//     //nadać klasy tym powyższym elementom
+//     div_img.setAttribute("class", "demo_projects");
+//     div_text.setAttribute("class", "demo_projectName");
+//     div.setAttribute("class", "projects_lists");
+// })
+
+// pickedPosts.forEach((post) => {
+//         const div = document.createElement('div');
+    
+//         const div_text = document.createElement('div');
+//         div_text.textContent = `${post.name}`;
+//         div.appendChild(div_text);
+ 
+//         const div_img = document.createElement('img');
+//         div_img.src = post.image;
+
+//         const div_href = document.createElement('a');
+//         div_href.setAttribute('href', `${post.href}`);
+//         div_href.appendChild(div_img);
+
+//         div.appendChild(div_href);
+      
+//         document.getElementById('projects').appendChild(div);
+
+//         div_img.setAttribute("class", "demo_projects");
+//         div_text.setAttribute("class", "demo_projectName");
+//         div.setAttribute("class", "projects_lists");
+//     })
+    
 pickedPosts.forEach((post) => {
     const div = document.createElement('div');
 
-    const div_text = document.createElement('span');
+    const div_text = document.createElement('div');
     div_text.textContent = `${post.name}`;
     div.appendChild(div_text);
-    //nowy element obrazka utworzyć
+
     const div_img = document.createElement('img');
     div_img.src = post.image;
+
+    const div_href = document.createElement('a');
+    div_href.setAttribute('href', `${post.href}`);
+    div_href.appendChild(div_text);
+
+    div.appendChild(div_href);
     div.appendChild(div_img);
   
     document.getElementById('projects').appendChild(div);
-    //nadać klasy tym powyższym elementom
+
     div_img.setAttribute("class", "demo_projects");
     div_text.setAttribute("class", "demo_projectName");
     div.setAttribute("class", "projects_lists");
 })
-
