@@ -300,6 +300,10 @@ h1, h2, h3, h4, h5 {
 
 .projects_lists {
   position: relative;
+  width: 350px;
+  height: auto;
+  display: flex;
+  flex: 0 1 auto;
 }
 
 .demo_projects {

@@ -68,8 +68,8 @@ const projects = [
 const pickedPosts = [];
 // const currentPageId = Number(location.pathname.match(/^(\d)*-/)[0]);
 // const currentPageId = window.location.pathname.match(/^(\d)*-/)[0];
-const currentPageId = 0;
-// const currentPageId = Number(location.pathname.match(/(\d+)\.html$/)[1]); to jest git
+// const currentPageId = 0;
+const currentPageId = Number(location.pathname.match(/(\d+)\.html$/)[1]); 
 
 const projectsWithoutCurrent = projects.filter(project => project.id !== currentPageId);
 
