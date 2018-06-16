@@ -69,15 +69,49 @@ const pickedPosts = [];
 // const currentPageId = Number(location.pathname.match(/^(\d)*-/)[0]);
 // const currentPageId = window.location.pathname.match(/^(\d)*-/)[0];
 const currentPageId = 0;
+// const currentPageId = Number(location.pathname.match(/(\d+)\.html$/)[1]); to jest git
 
 const projectsWithoutCurrent = projects.filter(project => project.id !== currentPageId);
 
-for (let index = 0; index < 3; index++) {
-    const randomIndex = Math.round(Math.random() * projectsWithoutCurrent.length);
+while (pickedPosts.length < 3) {
+    const randomIndex = Math.floor(Math.random() * projectsWithoutCurrent.length);
     if (pickedPosts.indexOf(projectsWithoutCurrent[randomIndex]) === -1) {
         pickedPosts.push(projectsWithoutCurrent[randomIndex]);
     }
+    // pickedPosts++;
 }
+
+
+// for (let index = 0; index < 3; index++) {
+//     const randomIndex = Math.round(Math.random() * projectsWithoutCurrent.length);
+//     if (pickedPosts.indexOf(projectsWithoutCurrent[randomIndex]) === -1) {
+//         pickedPosts.push(projectsWithoutCurrent[randomIndex]);
+//     }
+// }
+    
+pickedPosts.forEach((post) => {
+    const div = document.createElement('div');
+
+    const div_text = document.createElement('div');
+    div_text.textContent = `${post.name}`;
+    div.appendChild(div_text);
+
+    const div_img = document.createElement('img');
+    div_img.src = post.image;
+
+    const div_href = document.createElement('a');
+    div_href.setAttribute('href', `${post.href}`);
+    div_href.appendChild(div_text);
+
+    div.appendChild(div_href);
+    div.appendChild(div_img);
+  
+    document.getElementById('projects').appendChild(div);
+
+    div_img.setAttribute("class", "demo_projects");
+    div_text.setAttribute("class", "demo_projectName");
+    div.setAttribute("class", "projects_lists");
+})
 
 // pickedPosts.forEach((post) => {
 //     const div = document.createElement('div');
@@ -119,27 +153,3 @@ for (let index = 0; index < 3; index++) {
 //         div_text.setAttribute("class", "demo_projectName");
 //         div.setAttribute("class", "projects_lists");
 //     })
-    
-pickedPosts.forEach((post) => {
-    const div = document.createElement('div');
-
-    const div_text = document.createElement('div');
-    div_text.textContent = `${post.name}`;
-    div.appendChild(div_text);
-
-    const div_img = document.createElement('img');
-    div_img.src = post.image;
-
-    const div_href = document.createElement('a');
-    div_href.setAttribute('href', `${post.href}`);
-    div_href.appendChild(div_text);
-
-    div.appendChild(div_href);
-    div.appendChild(div_img);
-  
-    document.getElementById('projects').appendChild(div);
-
-    div_img.setAttribute("class", "demo_projects");
-    div_text.setAttribute("class", "demo_projectName");
-    div.setAttribute("class", "projects_lists");
-})
