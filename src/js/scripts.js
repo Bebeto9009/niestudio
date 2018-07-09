@@ -53,8 +53,8 @@ function masonry(grid, gridCell, gridGutter, dGridCol, tGridCol, mGridCol) {
 /* lazy loader*/
 // const observer = demo-image(); // lazy loads elements with default selector as '.lozad'
 // observer.observe();
-
-
+// console.log(observer);
+// var myLazyLoad = new LazyLoad();
 
 // randomProjects
 const projects = [
